@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/assetFragment"
+        android:name="com.ppantaleon.sharedelement_navcomp.AssetExampleFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_asset" >
+        <action
+            android:id="@+id/action_asset_to_assetDetail"
+            app:destination="@id/assetDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assetDetailFragment"
+        android:name="com.ppantaleon.sharedelement_navcomp.AssetDetailExampleFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_asset_detail" />
+    <fragment
+        android:id="@+id/glideDetailExampleFragment"
+        android:name="com.ppantaleon.sharedelement_navcomp.GlideDetailExampleFragment"
+        android:label="GlideDetailExampleFragment"
+        tools:layout="@layout/fragment_glide_detail" />
+    <fragment
+        android:id="@+id/glideExampleFragment"
+        android:name="com.ppantaleon.sharedelement_navcomp.GlideExampleFragment"
+        android:label="GlideExampleFragment"
+        tools:layout="@layout/fragment_glide" >
+        <action
+            android:id="@+id/action_glide_to_glideDetail"
+            app:destination="@id/glideDetailExampleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ppantaleon.sharedelement_navcomp.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_asset_example"
+            app:destination="@id/assetFragment" />
+        <action
+            android:id="@+id/action_glide_example"
+            app:destination="@id/glideExampleFragment" />
+    </fragment>
+</navigation>
